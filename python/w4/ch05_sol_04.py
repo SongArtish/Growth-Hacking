@@ -1,0 +1,6 @@
+weight = float(input('몸무게(kg): '))
+height = float(input('신장(m): '))
+# bmi = int(weight / (height ** 2))
+# bmi = weight // (height ** 2)
+bmi = round(weight / (height ** 2), 2)
+print(f'BMI: {bmi}')
