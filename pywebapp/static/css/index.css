@@ -1,0 +1,48 @@
+/* @import "root.css"; */
+
+/* index */
+.index {
+    outline: solid;
+    padding-bottom: 2rem;
+}
+.index-title {
+    background-color: #292b2c;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.index-title-a {
+    color: #f7f7f7;
+    text-decoration: none;
+}
+.index-topics {
+}
+.index-topic {
+}
+.index-topic-a {
+}
+
+/* content */
+.content {
+    margin-bottom: 1rem;
+    outline: solid;
+    padding-bottom: 2rem;
+}
+.content-title {
+    background-color: #292b2c;
+    color: #f7f7f7;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.content-button {
+    height: 3rem;
+    margin-top: 1rem;
+    width: 20%;
+}
+
+.button-create {
+    height: 3rem;
+    width: 100%;
+}
+
+/* Depth 2 */
+

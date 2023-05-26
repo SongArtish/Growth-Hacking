@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/root.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <title>Topics</title>
+</head>
+<body>
+    <div class="index">
+        <h1 class="index-title"><a class="index-title-a" href="/">Programming Language</a></h1>
+        <ol class="index-topics">
+            {% for topic in topics %}
+                <li class="index-topic"><a class="index-topic-a" href="/read/{{topic.id}}">{{ topic.title }}</a></li>
+            {% endfor %}
+        </ol>
+    </div>
+    {% if data %}
+    <div class="content">
+        <h2 class="content-title">About {{ data.title }}</h2>
+        <p>{{ data.body }}</p>
+        <button class="content-button">Update content</button>
+    </div>
+    {% endif %}
+    <a href="/create/"><button class="button-create">create</button></a>
+</body>
+</html>
