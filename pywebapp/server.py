@@ -13,7 +13,7 @@ def create():
         return render_template('create.html', data=None)
     elif request.method == 'POST':
         data = {
-            'id': len(topics),
+            'id': len(topics)+1,
             'title': request.form['title'],
             'body': request.form['body']
         }
@@ -47,10 +47,32 @@ def update(id):
                 data['title'] = topic['title']
                 data['body'] = topic['body']
                 break
-        return render_template('create.html', data=data)
+        print(data)
+        return render_template('update.html', data=data)
     elif request.method == 'POST':
-        pass
+        data = {
+            'id': id,
+            'title': request.form['title'],
+            'body': request.form['body']
+        }
+        for i, topic in enumerate(topics):
+            if id == topic['id']:
+                topics[i] = data
+                break
+        return render_template('index.html', topics=topics, data=data)
+
+@app.route('/delete/<int:id>/', methods=['GET', 'POST'])
+def delete(id):
+    if request.method == 'POST':
+        for i in range(len(topics)):
+            if id == topics[i]['id']:
+                topics.pop(i)
+                break
+    return render_template('index.html', topics=topics, data=None)
 
 if __name__ == '__main__':
     app.run(debug=True)
 # 포트번호 변경 가능: app.run(port=5001, debug=True)
+
+# 서버 실행 cmd 명령어
+# python server.py

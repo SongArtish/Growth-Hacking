@@ -1,9 +1,19 @@
 /* @import "root.css"; */
 
+.container {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
 /* index */
 .index {
+    float: left;
+    height: 22rem;
     outline: solid;
     padding-bottom: 2rem;
+    width: 49%;
 }
 .index-title {
     background-color: #292b2c;
@@ -23,9 +33,12 @@
 
 /* content */
 .content {
+    float: right;
+    height: 22rem;
     margin-bottom: 1rem;
     outline: solid;
     padding-bottom: 2rem;
+    width: 49%;
 }
 .content-title {
     background-color: #292b2c;
@@ -34,15 +47,32 @@
     padding-bottom: 1rem;
 }
 .content-button {
-    height: 3rem;
-    margin-top: 1rem;
-    width: 20%;
+    margin-top: 3rem;
+}
+.content-button-update {
+    background: #33B5E5;
+    width: 40%;
+}
+.content-button-delete {
+    background: #ff4444;
+    width: 40%;
+}
+.content-button-delete-form {
+    display: inline;
 }
 
 .button-create {
-    height: 3rem;
-    width: 100%;
+    background: #f7f7f7;
+    margin-top: 1rem;
+    width: 98%;
 }
 
 /* Depth 2 */
 
+button {
+    height: 3rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
